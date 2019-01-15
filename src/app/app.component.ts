@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'todo-app';
   todoArray=[];
+  inputValue: string;
 
   addTodo(value)
   {
-    this.todoArray.push(value);
-    console.log("Add Item: " + this.todoArray);
+      this.todoArray.push(value);
+      console.log("Add Item: " + this.todoArray);
+      this.inputValue = null;
   }
 
   deleteTodo(todo)
@@ -32,8 +35,7 @@ export class AppComponent {
   {
     if(value!=="")
     {
-      this.todoArray.push(value.todo)
-      //this.todoForm.reset()
+      this.todoArray.push(value.todo);
     }
     else
     {

@@ -16,8 +16,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
-    NgForm
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
